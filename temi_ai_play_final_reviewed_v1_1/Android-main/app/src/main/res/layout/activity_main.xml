@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="테미와 숨바꼭질"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="temi 연결 확인 중"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/detector_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="사람 감지 준비 중"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_permission"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:text="① 사람 감지 권한 설정 / 다시 확인"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/detector_test_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="○ 테스트 전: temi 앞에 서서 감지를 확인하세요."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="참가 인원"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/children_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="참가 인원 선택" />
+
+            <Button
+                android:id="@+id/btn_route"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:text="② 안전한 자동 순찰 장소 2~3곳 선택"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/route_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="순찰 장소를 선택해 주세요."
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginTop="14dp"
+                android:text="③ 숨바꼭질 시작"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/game_phase_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="게임 준비"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/game_score_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="찾은 사람 0 / 0명"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/game_time_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="남은 시간 10:00"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/game_message_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#E5F0F6"
+                android:padding="14dp"
+                android:text="안전한 장소를 미리 등록하세요."
+                android:textColor="#18384A"
+                android:textSize="17sp"
+                android:minHeight="75dp" />
+
+            <Button
+                android:id="@+id/btn_resume"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:text="경로 확인 후 다시 이동"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="28dp"
+                android:text="게임 규칙: 발견된 참가자는 대기구역으로 이동합니다. 5분 후 미발견 시 ‘못 찾겠다 꾀꼬리’, 10분 자동 종료. 탐색은 지정한 장소에서 멈춰서 진행하며 이동 중 감지는 보장되지 않습니다. 교사가 로봇 옆에서 계속 감독하세요."
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 고정형 긴급 중단: 스크롤하지 않아도 언제나 보이도록 화면 하단에 고정 -->
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#C62828"
+        android:text="■ 긴급 중단 · 로봇 정지"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/dev_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

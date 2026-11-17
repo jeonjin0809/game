@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8FB"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/memory_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+            <TextView
+                android:id="@+id/memory_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="기억력 놀이"
+                android:textColor="#203B59"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/memory_connection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="연결 확인 중"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/memory_agent_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="AI 서버 미설정 · 오프라인 게임 가능"
+                android:textColor="#2A6789"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/memory_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="1 / 5 문제"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/memory_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="순서를 기억해요!"
+                android:textSize="22sp" />
+            <TextView
+                android:id="@+id/memory_countdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="기억할 시간"
+                android:textSize="17sp" />
+            <LinearLayout
+                android:id="@+id/memory_cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:id="@+id/memory_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+            <TextView
+                android:id="@+id/memory_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#E0F2F7"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:padding="10dp"
+                android:text="잘했어요!"
+                android:textColor="#19374F"
+                android:textSize="18sp"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/memory_hint"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:text="힌트 주세요"
+                android:textAllCaps="false"
+                android:textSize="19sp"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/memory_example"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="6dp"
+                android:text="다른 예시 보기"
+                android:textAllCaps="false"
+                android:textSize="19sp"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/memory_start"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:text="게임 시작"
+                android:textAllCaps="false"
+                android:textSize="21sp" />
+            <Button
+                android:id="@+id/memory_next"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:text="다음 문제"
+                android:textAllCaps="false"
+                android:textSize="19sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/memory_quit"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="6dp"
+        android:text="메뉴로 돌아가기 · 음성 중지"
+        android:textAllCaps="false"
+        android:textSize="17sp" />
+</LinearLayout>
