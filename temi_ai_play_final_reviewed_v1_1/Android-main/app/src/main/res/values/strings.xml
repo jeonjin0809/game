@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">어린이집 temi</string>
+    <string name="status_waiting">temi 연결 대기 중…</string>
+    <string name="status_connected">temi 연결됨</string>
+</resources>

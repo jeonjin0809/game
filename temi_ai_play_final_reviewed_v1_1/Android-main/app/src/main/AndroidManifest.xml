@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 이번 데모에서는 사진·영상·음성을 수집하지 않습니다. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- usesCleartextTraffic: 교사가 설정한 로컬 노트북 서버와 http:// 통신.
+         공개 네트워크 금지. 실서비스에는 HTTPS/접근 통제가 필요함. -->
+    <application
+        android:name=".DaycareApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DaycareTemi"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".GameMenuActivity"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape"
+            android:exported="false" />
+        <activity
+            android:name=".play.MemoryGameActivity"
+            android:screenOrientation="landscape"
+            android:exported="false" />
+        <!-- SDK Settings 권한 선언 -->
+        <meta-data android:name="com.robotemi.sdk.metadata.PERMISSIONS"
+            android:value="com.robotemi.permission.settings" />
+        <!-- 구버전 Launcher의 Detection Mode에서 Kiosk 앱 선언 필요.
+             선언만으로 선택되지 않으므로 temi 설정에서 이 앱을 Kiosk로 선택해야 합니다. -->
+        <meta-data android:name="com.robotemi.sdk.metadata.KIOSK" android:value="true" />
+        <!-- temi 런처에 스킬(앱)로 표시 -->
+        <meta-data
+            android:name="com.robotemi.sdk.metadata.SKILL"
+            android:value="@string/app_name" />
+    </application>
+
+</manifest>

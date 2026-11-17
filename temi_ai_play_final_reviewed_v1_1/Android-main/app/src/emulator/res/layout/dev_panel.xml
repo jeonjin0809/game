@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- emulator 빌드 전용 개발 패널. 오른쪽 위: 시뮬레이션 버튼 / 하단: 로그 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="8dp"
+        android:background="#CC263238"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEV · 응급 이벤트"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/dev_btn_cry"
+            style="@style/DevButton"
+            android:text="울음소리 감지" />
+
+        <Button
+            android:id="@+id/dev_btn_emergency"
+            style="@style/DevButton"
+            android:text="비상 버튼" />
+
+        <Button
+            android:id="@+id/dev_btn_fall"
+            style="@style/DevButton"
+            android:text="넘어짐 감지" />
+
+        <Button
+            android:id="@+id/dev_btn_dismiss"
+            style="@style/DevButton"
+            android:text="해제 음성" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="DEV · 로봇"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/dev_btn_person"
+            style="@style/DevButton"
+            android:text="사람 감지" />
+
+        <Button
+            android:id="@+id/dev_btn_goto"
+            style="@style/DevButton"
+            android:text="이동: 식탁" />
+
+        <Button
+            android:id="@+id/dev_btn_turn"
+            style="@style/DevButton"
+            android:text="회전 90°" />
+
+        <Button
+            android:id="@+id/dev_btn_stop"
+            style="@style/DevButton"
+            android:text="정지" />
+
+        <Button
+            android:id="@+id/dev_btn_clear"
+            style="@style/DevButton"
+            android:text="로그 지우기" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/dev_log_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="84dp"
+        android:background="#E6000000"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/dev_log_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textColor="#B9F6CA"
+            android:textSize="11sp" />
+    </ScrollView>
+</merge>

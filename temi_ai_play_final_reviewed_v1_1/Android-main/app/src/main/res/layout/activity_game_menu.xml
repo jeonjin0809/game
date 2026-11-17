@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F8FB">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="28dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="temi AI 놀이 도우미"
+            android:textColor="#203B59"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="게임을 골라 주세요!"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/menu_memory"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="AI 기억·이야기 놀이 시작"
+            android:text="기억·이야기 놀이 · 5개 미션"
+            android:textAllCaps="false"
+            android:textSize="22sp" />
+        <Button
+            android:id="@+id/menu_hide"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="14dp"
+            android:contentDescription="숨바꼭질 시작"
+            android:text="숨바꼭질 · temi 자동 순찰"
+            android:textAllCaps="false"
+            android:textSize="22sp" />
+        <Button
+            android:id="@+id/menu_history"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="교사용 지난 기억·이야기 놀이 기록"
+            android:text="선생님용 · 지난 놀이 기록"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/menu_follow_up"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="교사가 다음 맞춤 놀이 계획 확인 후 승인"
+            android:text="선생님용 · 다음 맞춤 놀이 승인"
+            android:textAllCaps="false"
+            android:textSize="19sp" />
+        <Button
+            android:id="@+id/menu_agent"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:text="선생님용 · AI 서버 설정/연결 확인"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="4~7세를 위한 놀이예요. 연령 선택 없이 쉬운 문제부터 시작하고, 아이의 게임 결과에 맞춰 다음 문제를 조절해요. AI 연결이 끊겨도 놀이를 계속할 수 있어요."
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>
